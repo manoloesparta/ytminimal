@@ -1,4 +1,4 @@
-/* ===== NAVIGATION ===== */
+/* navigation */
 #masthead-container,
 ytd-masthead,
 #masthead,
@@ -7,14 +7,14 @@ ytd-masthead,
   display: none !important;
 }
 
-/* ===== SIDEBAR & RECOMMENDATIONS ===== */
+/* sidebar and recommendations */
 #secondary,
 #related,
 ytd-watch-next-secondary-results-renderer {
   display: none !important;
 }
 
-/* ===== VIDEO METADATA ===== */
+/* video metadata */
 #info,
 #info-contents,
 #info-text,
@@ -33,7 +33,7 @@ ytd-structured-description-content-renderer {
   display: none !important;
 }
 
-/* ===== COMMENTS ===== */
+/* comments */
 #comments,
 ytd-comments,
 ytd-comments-header-renderer,
@@ -42,7 +42,7 @@ ytd-comment-thread-renderer,
   display: none !important;
 }
 
-/* ===== VIDEO OVERLAYS ===== */
+/* video overlays */
 .ytp-ce-element,
 .ytp-cards-teaser,
 .ytp-endscreen-content,
@@ -53,13 +53,13 @@ ytd-comment-thread-renderer,
   display: none !important;
 }
 
-/* ===== PLAYLISTS ===== */
+/* playlists */
 #playlist,
 ytd-playlist-panel-renderer {
   display: none !important;
 }
 
-/* ===== ENGAGEMENT BUTTONS ===== */
+/* engagement buttons */
 #top-level-buttons,
 #top-level-buttons-computed,
 ytd-menu-renderer,
@@ -71,13 +71,13 @@ ytd-subscribe-button-renderer,
   display: none !important;
 }
 
-/* ===== FILTERS & CHIPS ===== */
+/* filters and chips */
 #chips,
 ytd-feed-filter-chip-bar-renderer {
   display: none !important;
 }
 
-/* ===== BANNERS & PROMOTIONS ===== */
+/* banners and promotions */
 ytd-banner-promo-renderer,
 ytd-popup-container,
 ytd-merch-shelf-renderer,
@@ -86,14 +86,14 @@ ytd-ticket-shelf-renderer {
   display: none !important;
 }
 
-/* ===== CHAPTERS ===== */
+/* chapters */
 ytd-horizontal-card-list-renderer,
 ytd-macro-markers-list-renderer,
 .ytp-chapter-container {
   display: none !important;
 }
 
-/* ===== LAYOUT ADJUSTMENTS ===== */
+/* layout adjustments */
 #player-theater-container,
 #player-container,
 #player {

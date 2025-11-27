@@ -1,7 +1,7 @@
 {
   "name": "Lightweight Youtube",
-  "description": "Extension for deleting youtube video recommendations.",
-  "version": "0.1",
+  "description": "Extension making youtube less distracting.",
+  "version": "0.2",
   "manifest_version": 3,
   "icons": {
     "16": "favicon.png",
