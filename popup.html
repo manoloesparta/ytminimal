@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unwanted YouTube</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Unwanted YouTube</h1>
+    <p>Hide distractions, focus on videos</p>
+  </header>
+
+  <!-- Main Control -->
+  <main>
+    <div class="toggle-container">
+      <span class="toggle-label">Video Only Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleExtension" aria-label="Toggle video only mode">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Status Indicator -->
+    <div class="status" id="status" role="status">Extension is OFF</div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Toggle to show/hide YouTube elements</p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

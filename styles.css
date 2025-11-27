@@ -1,0 +1,115 @@
+/* ===== NAVIGATION ===== */
+#masthead-container,
+ytd-masthead,
+#masthead,
+#search,
+#search-form {
+  display: none !important;
+}
+
+/* ===== SIDEBAR & RECOMMENDATIONS ===== */
+#secondary,
+#related,
+ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* ===== VIDEO METADATA ===== */
+#info,
+#info-contents,
+#info-text,
+#info.ytd-watch-flexy,
+ytd-video-primary-info-renderer,
+ytd-video-secondary-info-renderer,
+#above-the-fold,
+#below,
+#meta,
+ytd-metadata-row-container-renderer,
+#title,
+#description,
+#owner,
+ytd-video-owner-renderer,
+ytd-structured-description-content-renderer {
+  display: none !important;
+}
+
+/* ===== COMMENTS ===== */
+#comments,
+ytd-comments,
+ytd-comments-header-renderer,
+ytd-comment-thread-renderer,
+#sections {
+  display: none !important;
+}
+
+/* ===== VIDEO OVERLAYS ===== */
+.ytp-ce-element,
+.ytp-cards-teaser,
+.ytp-endscreen-content,
+.ytp-pause-overlay,
+.ytp-suggestion-set,
+.ytp-scroll-min,
+.ytp-show-cards-title {
+  display: none !important;
+}
+
+/* ===== PLAYLISTS ===== */
+#playlist,
+ytd-playlist-panel-renderer {
+  display: none !important;
+}
+
+/* ===== ENGAGEMENT BUTTONS ===== */
+#top-level-buttons,
+#top-level-buttons-computed,
+ytd-menu-renderer,
+#actions,
+ytd-video-primary-info-renderer #menu,
+#subscribe-button,
+ytd-subscribe-button-renderer,
+#notification-preference-button {
+  display: none !important;
+}
+
+/* ===== FILTERS & CHIPS ===== */
+#chips,
+ytd-feed-filter-chip-bar-renderer {
+  display: none !important;
+}
+
+/* ===== BANNERS & PROMOTIONS ===== */
+ytd-banner-promo-renderer,
+ytd-popup-container,
+ytd-merch-shelf-renderer,
+ytd-donation-shelf-renderer,
+ytd-ticket-shelf-renderer {
+  display: none !important;
+}
+
+/* ===== CHAPTERS ===== */
+ytd-horizontal-card-list-renderer,
+ytd-macro-markers-list-renderer,
+.ytp-chapter-container {
+  display: none !important;
+}
+
+/* ===== LAYOUT ADJUSTMENTS ===== */
+#player-theater-container,
+#player-container,
+#player {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
+
+#primary {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+ytd-watch-flexy,
+#page-manager,
+ytd-app,
+body {
+  background: #000 !important;
+  background-color: #000 !important;
+}
