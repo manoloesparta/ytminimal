@@ -1,67 +1,115 @@
-'use strict';
+const STORAGE_KEYS = {
+  all: 'hideAll',
+  metadata: 'hideMetadata',
+  comments: 'hideComments',
+  recommended: 'hideRecommended'
+};
 
-// Constants
-const STORAGE_KEY = 'enabled';
-
-// DOM Elements
-const toggle = document.getElementById('toggleExtension');
+const toggleAll = document.getElementById('toggleAll');
+const toggleMetadata = document.getElementById('toggleMetadata');
+const toggleComments = document.getElementById('toggleComments');
+const toggleRecommended = document.getElementById('toggleRecommended');
 const statusDiv = document.getElementById('status');
 
-/**
- * Update the status indicator
- * @param {boolean} enabled - Current enabled state
- */
-function updateStatus(enabled) {
-  if (enabled) {
-    statusDiv.textContent = 'Extension is ON';
-    statusDiv.classList.add('active');
+function updateStatus(state) {
+  const enabledFeatures = [];
+
+  if (state.hideAll) {
+    enabledFeatures.push('All');
   } else {
-    statusDiv.textContent = 'Extension is OFF';
+    if (state.hideMetadata) enabledFeatures.push('Metadata');
+    if (state.hideComments) enabledFeatures.push('Comments');
+    if (state.hideRecommended) enabledFeatures.push('Recommended');
+  }
+
+  if (enabledFeatures.length === 0) {
+    statusDiv.textContent = 'All features disabled';
     statusDiv.classList.remove('active');
+  } else {
+    statusDiv.textContent = `Hiding: ${enabledFeatures.join(', ')}`;
+    statusDiv.classList.add('active');
   }
 }
 
-/**
- * Load saved state from storage
- */
 function loadState() {
-  chrome.storage.sync.get([STORAGE_KEY], (result) => {
+  chrome.storage.sync.get(Object.values(STORAGE_KEYS), (result) => {
     if (chrome.runtime.lastError) {
       console.error('Error loading state:', chrome.runtime.lastError);
       return;
     }
 
-    const enabled = result[STORAGE_KEY] || false;
-    toggle.checked = enabled;
-    updateStatus(enabled);
+    const state = {
+      hideAll: result[STORAGE_KEYS.all] || false,
+      hideMetadata: result[STORAGE_KEYS.metadata] || false,
+      hideComments: result[STORAGE_KEYS.comments] || false,
+      hideRecommended: result[STORAGE_KEYS.recommended] || false
+    };
+
+    toggleAll.checked = state.hideAll;
+    toggleMetadata.checked = state.hideMetadata;
+    toggleComments.checked = state.hideComments;
+    toggleRecommended.checked = state.hideRecommended;
+
+    updateDisabledState(state.hideAll);
+    updateStatus(state);
   });
 }
 
-/**
- * Save state to storage
- * @param {boolean} enabled - New enabled state
- */
-function saveState(enabled) {
-  chrome.storage.sync.set({ [STORAGE_KEY]: enabled }, () => {
+function updateDisabledState(allEnabled) {
+  toggleMetadata.disabled = allEnabled;
+  toggleComments.disabled = allEnabled;
+  toggleRecommended.disabled = allEnabled;
+
+  const containers = [
+    toggleMetadata.closest('.toggle-container'),
+    toggleComments.closest('.toggle-container'),
+    toggleRecommended.closest('.toggle-container')
+  ];
+
+  containers.forEach(container => {
+    if (allEnabled) {
+      container.style.opacity = '0.5';
+    } else {
+      container.style.opacity = '1';
+    }
+  });
+}
+
+function saveState(key, value) {
+  chrome.storage.sync.set({ [key]: value }, () => {
     if (chrome.runtime.lastError) {
       console.error('Error saving state:', chrome.runtime.lastError);
       return;
     }
 
-    updateStatus(enabled);
+    chrome.storage.sync.get(Object.values(STORAGE_KEYS), (result) => {
+      const state = {
+        hideAll: result[STORAGE_KEYS.all] || false,
+        hideMetadata: result[STORAGE_KEYS.metadata] || false,
+        hideComments: result[STORAGE_KEYS.comments] || false,
+        hideRecommended: result[STORAGE_KEYS.recommended] || false
+      };
+      updateStatus(state);
+    });
   });
 }
 
-/**
- * Handle toggle change event
- */
-function handleToggleChange() {
-  const enabled = toggle.checked;
-  saveState(enabled);
+function handleToggleAll() {
+  const enabled = toggleAll.checked;
+  updateDisabledState(enabled);
+  saveState(STORAGE_KEYS.all, enabled);
 }
 
-// Event Listeners
-toggle.addEventListener('change', handleToggleChange);
+function handleToggleChange(key) {
+  return function() {
+    const toggle = this;
+    saveState(key, toggle.checked);
+  };
+}
 
-// Initialize
+toggleAll.addEventListener('change', handleToggleAll);
+toggleMetadata.addEventListener('change', handleToggleChange(STORAGE_KEYS.metadata));
+toggleComments.addEventListener('change', handleToggleChange(STORAGE_KEYS.comments));
+toggleRecommended.addEventListener('change', handleToggleChange(STORAGE_KEYS.recommended));
+
 loadState();

@@ -1,115 +1,158 @@
-/* navigation */
-#masthead-container,
-ytd-masthead,
-#masthead,
-#search,
-#search-form {
+/* hide metadata */
+.ytm-hide-metadata #info,
+.ytm-hide-metadata #info-contents,
+.ytm-hide-metadata #info-text,
+.ytm-hide-metadata #info.ytd-watch-flexy,
+.ytm-hide-metadata ytd-video-primary-info-renderer,
+.ytm-hide-metadata ytd-video-secondary-info-renderer,
+.ytm-hide-metadata #meta,
+.ytm-hide-metadata ytd-metadata-row-container-renderer,
+.ytm-hide-metadata #title,
+.ytm-hide-metadata #description,
+.ytm-hide-metadata #owner,
+.ytm-hide-metadata ytd-video-owner-renderer,
+.ytm-hide-metadata ytd-structured-description-content-renderer,
+.ytm-hide-metadata #top-level-buttons,
+.ytm-hide-metadata #top-level-buttons-computed,
+.ytm-hide-metadata ytd-menu-renderer,
+.ytm-hide-metadata #actions,
+.ytm-hide-metadata ytd-video-primary-info-renderer #menu,
+.ytm-hide-metadata #subscribe-button,
+.ytm-hide-metadata ytd-subscribe-button-renderer,
+.ytm-hide-metadata #notification-preference-button {
   display: none !important;
 }
 
-/* sidebar and recommendations */
-#secondary,
-#related,
-ytd-watch-next-secondary-results-renderer {
+/* hide comments */
+.ytm-hide-comments #comments,
+.ytm-hide-comments ytd-comments,
+.ytm-hide-comments ytd-comments-header-renderer,
+.ytm-hide-comments ytd-comment-thread-renderer,
+.ytm-hide-comments #sections {
   display: none !important;
 }
 
-/* video metadata */
-#info,
-#info-contents,
-#info-text,
-#info.ytd-watch-flexy,
-ytd-video-primary-info-renderer,
-ytd-video-secondary-info-renderer,
-#above-the-fold,
-#below,
-#meta,
-ytd-metadata-row-container-renderer,
-#title,
-#description,
-#owner,
-ytd-video-owner-renderer,
-ytd-structured-description-content-renderer {
+/* hide recommended videos */
+.ytm-hide-recommended #secondary,
+.ytm-hide-recommended #related,
+.ytm-hide-recommended ytd-watch-next-secondary-results-renderer {
   display: none !important;
 }
 
-/* comments */
-#comments,
-ytd-comments,
-ytd-comments-header-renderer,
-ytd-comment-thread-renderer,
-#sections {
+/* hide all */
+.ytm-hide-all #masthead-container,
+.ytm-hide-all ytd-masthead,
+.ytm-hide-all #masthead,
+.ytm-hide-all #search,
+.ytm-hide-all #search-form {
   display: none !important;
 }
 
-/* video overlays */
-.ytp-ce-element,
-.ytp-cards-teaser,
-.ytp-endscreen-content,
-.ytp-pause-overlay,
-.ytp-suggestion-set,
-.ytp-scroll-min,
-.ytp-show-cards-title {
+.ytm-hide-all #secondary,
+.ytm-hide-all #related,
+.ytm-hide-all ytd-watch-next-secondary-results-renderer {
   display: none !important;
 }
 
-/* playlists */
-#playlist,
-ytd-playlist-panel-renderer {
+.ytm-hide-all #info,
+.ytm-hide-all #info-contents,
+.ytm-hide-all #info-text,
+.ytm-hide-all #info.ytd-watch-flexy,
+.ytm-hide-all ytd-video-primary-info-renderer,
+.ytm-hide-all ytd-video-secondary-info-renderer,
+.ytm-hide-all #above-the-fold,
+.ytm-hide-all #below,
+.ytm-hide-all #meta,
+.ytm-hide-all ytd-metadata-row-container-renderer,
+.ytm-hide-all #title,
+.ytm-hide-all #description,
+.ytm-hide-all #owner,
+.ytm-hide-all ytd-video-owner-renderer,
+.ytm-hide-all ytd-structured-description-content-renderer {
   display: none !important;
 }
 
-/* engagement buttons */
-#top-level-buttons,
-#top-level-buttons-computed,
-ytd-menu-renderer,
-#actions,
-ytd-video-primary-info-renderer #menu,
-#subscribe-button,
-ytd-subscribe-button-renderer,
-#notification-preference-button {
+.ytm-hide-all #comments,
+.ytm-hide-all ytd-comments,
+.ytm-hide-all ytd-comments-header-renderer,
+.ytm-hide-all ytd-comment-thread-renderer,
+.ytm-hide-all #sections {
   display: none !important;
 }
 
-/* filters and chips */
-#chips,
-ytd-feed-filter-chip-bar-renderer {
+.ytm-hide-all .ytp-ce-element,
+.ytm-hide-all .ytp-cards-teaser,
+.ytm-hide-all .ytp-endscreen-content,
+.ytm-hide-all .ytp-pause-overlay,
+.ytm-hide-all .ytp-suggestion-set,
+.ytm-hide-all .ytp-scroll-min,
+.ytm-hide-all .ytp-show-cards-title {
   display: none !important;
 }
 
-/* banners and promotions */
-ytd-banner-promo-renderer,
-ytd-popup-container,
-ytd-merch-shelf-renderer,
-ytd-donation-shelf-renderer,
-ytd-ticket-shelf-renderer {
+.ytm-hide-all #playlist,
+.ytm-hide-all ytd-playlist-panel-renderer {
   display: none !important;
 }
 
-/* chapters */
-ytd-horizontal-card-list-renderer,
-ytd-macro-markers-list-renderer,
-.ytp-chapter-container {
+.ytm-hide-all #top-level-buttons,
+.ytm-hide-all #top-level-buttons-computed,
+.ytm-hide-all ytd-menu-renderer,
+.ytm-hide-all #actions,
+.ytm-hide-all ytd-video-primary-info-renderer #menu,
+.ytm-hide-all #subscribe-button,
+.ytm-hide-all ytd-subscribe-button-renderer,
+.ytm-hide-all #notification-preference-button {
   display: none !important;
 }
 
-/* layout adjustments */
-#player-theater-container,
-#player-container,
-#player {
+.ytm-hide-all #chips,
+.ytm-hide-all ytd-feed-filter-chip-bar-renderer {
+  display: none !important;
+}
+
+.ytm-hide-all ytd-banner-promo-renderer,
+.ytm-hide-all ytd-popup-container,
+.ytm-hide-all ytd-merch-shelf-renderer,
+.ytm-hide-all ytd-donation-shelf-renderer,
+.ytm-hide-all ytd-ticket-shelf-renderer {
+  display: none !important;
+}
+
+.ytm-hide-all ytd-horizontal-card-list-renderer,
+.ytm-hide-all ytd-macro-markers-list-renderer,
+.ytm-hide-all .ytp-chapter-container {
+  display: none !important;
+}
+
+.ytm-hide-all #player-theater-container,
+.ytm-hide-all #player-container,
+.ytm-hide-all #player,
+.ytm-hide-metadata #player-theater-container,
+.ytm-hide-metadata #player-container,
+.ytm-hide-metadata #player,
+.ytm-hide-comments #player-theater-container,
+.ytm-hide-comments #player-container,
+.ytm-hide-comments #player,
+.ytm-hide-recommended #player-theater-container,
+.ytm-hide-recommended #player-container,
+.ytm-hide-recommended #player {
   margin: 0 auto !important;
   max-width: 100% !important;
 }
 
-#primary {
+.ytm-hide-all #primary,
+.ytm-hide-metadata #primary,
+.ytm-hide-comments #primary,
+.ytm-hide-recommended #primary {
   max-width: 100% !important;
   margin: 0 !important;
 }
 
-ytd-watch-flexy,
-#page-manager,
-ytd-app,
-body {
+.ytm-hide-all ytd-watch-flexy,
+.ytm-hide-all #page-manager,
+.ytm-hide-all ytd-app,
+.ytm-hide-all body {
   background: #000 !important;
   background-color: #000 !important;
 }

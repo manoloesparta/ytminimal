@@ -14,14 +14,38 @@
 
   <main>
     <div class="toggle-container">
-      <span class="toggle-label">Video Only Mode</span>
+      <span class="toggle-label">Hide All</span>
       <label class="switch">
-        <input type="checkbox" id="toggleExtension" aria-label="Toggle video only mode">
+        <input type="checkbox" id="toggleAll" aria-label="Hide all distractions">
         <span class="slider"></span>
       </label>
     </div>
 
-    <div class="status" id="status" role="status">Extension is OFF</div>
+    <div class="toggle-container">
+      <span class="toggle-label">Hide Metadata</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleMetadata" aria-label="Hide video metadata">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Hide Comments</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleComments" aria-label="Hide comments">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Hide Recommended</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleRecommended" aria-label="Hide recommended videos">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="status" id="status" role="status">All features disabled</div>
   </main>
 
   <footer class="footer">
