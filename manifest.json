@@ -1,7 +1,7 @@
 {
   "name": "Minimal Youtube",
-  "description": "Extension making Youtube less distracting.",
-  "version": "0.2",
+  "description": "Extension for making Youtube less distracting.",
+  "version": "1.0",
   "manifest_version": 3,
   "icons": {
     "16": "favicon.png",
@@ -9,8 +9,7 @@
     "128": "favicon.png"
   },
   "permissions": [
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "host_permissions": [
     "https://www.youtube.com/*"
