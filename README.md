@@ -10,11 +10,11 @@ It allows you can hide the following sections from your Youtube page
 
 So you can change from this view
 
-<img src="./images/before.png" width=200>
+<img src="./images/before.png" width=400>
 
 To this one
 
-<img src="./images/after.png" width=200>
+<img src="./images/after.png" width=400>
 
 And stop doom scrolling (or whatever is equivalent in PC) to get some stuff done.
 
