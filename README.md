@@ -20,7 +20,7 @@ And stop doom scrolling (or whatever is equivalent in PC) to get some stuff done
 
 ## Installation
 
-You can install directly from the chrome extension's store [here](https://chromewebstore.google.com/).
+You can install directly from the chrome extension's store [here](https://chromewebstore.google.com/detail/minimal-youtube/emcnocggodlgmhjjocdbeooooaakjfcp).
 
 ## License
 
