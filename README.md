@@ -1,12 +1,14 @@
 # Minimal Youtube
 
-Sometimes I get stuck a couple of hours in Youtube because the algorithm it's too good and I find myself opening recommended videos in new tabs, here is my solution to stop doing that.
+A Chrome extension to declutter YouTube and stop the rabbit hole.
 
-It allows you can hide the following sections from your Youtube page
+Sometimes I get stuck a couple of hours in Youtube because the algorithm is too good and I find myself opening recommended videos in new tabs, here is my solution to stop doing that.
+
+You can hide the following sections from your Youtube page
 
 * Recommended videos
 * Comments
-* Metadata (Interactive buttons, channel name, view, etc...)
+* Metadata (buttons, channel name, view, etc...)
 
 So you can change from this view
 
